@@ -1,0 +1,86 @@
+/* Estilos globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #2c2f3a; /* Fondo oscuro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+    color: #fff;
+}
+
+.tarjeta-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sobre {
+    width: 300px;
+    height: 200px;
+    background: #ffffff; /* Fondo blanco para el sobre */
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+.sobre:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.carta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 1.3em;
+    color: #4b2a2a;
+    font-weight: bold;
+}
+
+.mensaje {
+    display: none; /* Inicialmente escondemos el mensaje */
+    text-align: center;
+    font-size: 1.5em;
+    margin-top: 20px;
+    background-color: #ffffff; /* Fondo blanco para el mensaje */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    color: #333;
+    width: 80%;
+    max-width: 500px;
+}
+
+h1 {
+    font-size: 2em;
+    color: #4b2a2a;
+    margin-bottom: 15px;
+    font-family: 'Georgia', serif;
+}
+
+p {
+    font-size: 1.2em;
+    color: #4b2a2a;
+}
+
+@keyframes abrirSobre {
+    0% {
+        transform: rotateX(0deg);
+    }
+    100% {
+        transform: rotateX(180deg);
+    }
+}
